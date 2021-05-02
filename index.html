@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+<main id="vueContainer">
+    <div class="wrap">
+        
+             <div class="slider" v-on:keyup.right="forward" v-on:keyup.left="back" class="box">
+
+                <button @click="back"> &#60; </button>
+
+                    <div class="photoscontainer">
+
+                                <div class="navigator">
+                                    <button class="dot" v-for="(img, index) in imgs" 
+                                    :class="{active: activeImg === index}" @click="{activeImg = index}"></button> 
+                                </div>
+
+                                <div class="titles">
+                                    <div class="hidden" v-for="(img, index) in imgs" 
+                                    :class="{visible: activeImg === index}">{{titles[activeImg]}}</div> 
+                                </div>
+
+                        <img v-bind:src="imgs[activeImg]" alt="">
+                    </div>
+
+                <button @click="forward"> &#62; </button>  
+            </div>
+        </div>
+    </div>     
+</main>
+
+ <script src="myScript.js"></script>   
+</body>
+</html>
+
+
+
