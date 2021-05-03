@@ -27,7 +27,11 @@ const app = new Vue(
                             this.activeImg = this.lastImg;
                         }
                     },
+                    activeIndex(clicked){
+                        this.activeImg = clicked;
+                    }
                 }
+                
     } 
 );
 

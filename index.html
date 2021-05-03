@@ -22,7 +22,7 @@
 
                                 <div class="navigator">
                                     <button class="dot" v-for="(img, index) in imgs" 
-                                    :class="{active: activeImg === index}" @click="{activeImg = index}"></button> 
+                                    :class="{active: activeImg === index}" @click="activeIndex(index)"></button> 
                                 </div>
 
                                 <div class="titles">
