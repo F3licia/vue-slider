@@ -8,7 +8,6 @@ const app = new Vue(
             titles:["titolo-1", "titolo-2", "titolo-3", "titolo-4"],
             activeImg: 0,
             lastImg: 3,
-            classi:[],
             },
          methods:{
                     forward() { 
